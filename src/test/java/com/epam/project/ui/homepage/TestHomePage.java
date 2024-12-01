@@ -7,7 +7,6 @@ import org.testng.annotations.BeforeTest;
 
 import static com.epam.project.framework.properties.EnvironmentProperty.getEnv;
 
-
 public class TestHomePage {
      HomeScreen homeScreen = new HomeScreen();
 
