@@ -99,7 +99,7 @@
                     <argLine>-Dfile.encoding=UTF-8</argLine>
                     <testFailureIgnore>true</testFailureIgnore>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${basedir}/src/test/resources/api_tests.xml</suiteXmlFile>
+                        <suiteXmlFile>${basedir}/src/test/resources/ui_tests.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <workingDirectory>./</workingDirectory>
                     <properties>

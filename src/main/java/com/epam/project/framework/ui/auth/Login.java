@@ -15,6 +15,9 @@ public class Login extends AbstractScreen {
     @FindBy(xpath = "//input[@id='identifier-field']")
     private WebElement emailField;
 
+    @FindBy(xpath = "//button[contains(., 'Continue')]")
+    private WebElement continueButton;
+
     public Login() {
         super();
         PageFactory.initElements(driver, this);
@@ -29,6 +32,19 @@ public class Login extends AbstractScreen {
         Thread.sleep(2000);
         signInButton.click();
         return new EmailGenerationPage();
+    }
+
+    public Login clickContinue() {
+        wait.until(ExpectedConditions.visibilityOf(continueButton)).click();
+        return this;
+    }
+
+    public boolean verifyButtonIsDisplayed() {
+        return continueButton.isDisplayed();
+    }
+
+    public String getEmail() {
+        return emailField.getAttribute("value");
     }
 
     public Login enterEmail(String email) {

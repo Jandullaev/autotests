@@ -1,5 +1,6 @@
 package com.epam.project.ui.homepage;
 
+import com.epam.project.framework.ui.auth.Login;
 import com.epam.project.framework.ui.screens.HomeScreen;
 import com.epam.project.framework.ui.yopmailEmailGeneration.EmailGenerationPage;
 import com.epam.project.model.User;
@@ -13,7 +14,8 @@ import static com.epam.project.framework.properties.EnvironmentProperty.getEnv;
 public class TestHomePage {
      HomeScreen homeScreen = new HomeScreen();
      EmailGenerationPage emailGenerationPage = new EmailGenerationPage();
-    User user = UserService.withCredentialsFromProperty();
+     User user = UserService.withCredentialsFromProperty();
+     Login login = new Login();
 
     @BeforeTest
     public void setUp() throws InterruptedException {
@@ -23,12 +25,12 @@ public class TestHomePage {
     }
 
     @Test
-    public void testHomePageIsDisplayed() {
-        Assert.assertTrue(homeScreen.isScreenLoaded(), "Home page is not loaded");
+    public void testButtonIsDisplayed() {
+        Assert.assertTrue(login.verifyButtonIsDisplayed(), "Button is not displayed");
     }
 
     @Test
-    public void verifyButtonIsDisplayed() {
-        Assert.assertTrue(homeScreen.isStartOrderButtonDisplayed(), "Button is not displayed");
+    public void verifyGetEmailText() {
+        Assert.assertEquals(login.getEmail(), user.getEmail(), "Email is not correct");
     }
 }

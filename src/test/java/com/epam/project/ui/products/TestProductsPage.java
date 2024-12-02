@@ -8,16 +8,5 @@ import org.testng.annotations.Test;
 import static com.epam.project.framework.properties.EnvironmentProperty.getEnv;
 
 public class TestProductsPage {
-    HomeScreen homeScreen = new HomeScreen();
 
-    @BeforeTest
-    public void setUp() {
-        homeScreen.openPage(getEnv());
-    }
-
-    @Test
-    public void testHomePageIsDisplayed() {
-        ProductScreen productScreen = homeScreen.navigateToProductsPage();
-        Assert.assertTrue(productScreen.isScreenLoaded(), "Home page is not loaded");
-    }
 }

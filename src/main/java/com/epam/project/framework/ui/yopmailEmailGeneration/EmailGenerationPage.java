@@ -70,6 +70,5 @@ public class EmailGenerationPage extends AbstractScreen {
     public void login(String email) throws InterruptedException {
         login.clickSignIn();
         login.enterEmail(email);
-
     }
 }
