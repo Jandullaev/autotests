@@ -26,6 +26,7 @@ public class Registration extends AbstractScreen {
     @FindBy(xpath = "//button[text()='Sign up']")
     private WebElement signUpButton;
 
+
     ArrayList<String> user = new ArrayList<>();
 
     public Registration() {

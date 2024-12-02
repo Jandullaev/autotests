@@ -1,7 +1,10 @@
 package com.epam.project.framework.ui.yopmailEmailGeneration;
 
 import com.epam.project.framework.ui.AbstractScreen;
+import com.epam.project.framework.ui.auth.Login;
 import com.epam.project.framework.ui.auth.Registration;
+import com.epam.project.model.User;
+import com.epam.project.service.UserService;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -13,6 +16,7 @@ public class EmailGenerationPage extends AbstractScreen {
 
     Registration registration = new Registration();
     EmailPage emailPage = new EmailPage();
+    Login login = new Login();
 
     @FindBy(xpath = "//button[contains(., 'Copy to clipboard')]")
     private WebElement copyToClipboard;
@@ -60,6 +64,12 @@ public class EmailGenerationPage extends AbstractScreen {
         emailPage.refreshButton().updateDriver(driver).copyVerifyEmailCode().switchToTab(0);
         enterVerifyEmailCode();
         registration.clickSignUp();
+
+    }
+
+    public void login(String email) throws InterruptedException {
+        login.clickSignIn();
+        login.enterEmail(email);
 
     }
 }
