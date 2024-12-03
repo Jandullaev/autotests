@@ -7,8 +7,6 @@ import static com.epam.project.api.Endpoints.PRODUCTS;
 import static com.epam.project.framework.loging.Log.logInfoMessage;
 import static com.epam.project.framework.properties.EnvironmentProperty.getEnv;
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.CoreMatchers.notNullValue;
-import static org.hamcrest.Matchers.*;
 
 public class GetProductsEndpoint {
 
