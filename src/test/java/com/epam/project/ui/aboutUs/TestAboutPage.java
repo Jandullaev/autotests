@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import static com.epam.project.framework.properties.EnvironmentProperty.getEnv;
 
 public class TestAboutPage {
-    private HomeScreen homeScreen = new HomeScreen();
+    private final HomeScreen homeScreen = new HomeScreen();
     private AboutUsScreen aboutUsScreen;
 
     @BeforeTest
