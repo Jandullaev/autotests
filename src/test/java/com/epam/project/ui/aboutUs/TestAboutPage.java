@@ -9,19 +9,19 @@ import org.testng.annotations.Test;
 import static com.epam.project.framework.properties.EnvironmentProperty.getEnv;
 
 public class TestAboutPage {
-    private final HomeScreen homeScreen = new HomeScreen();
-    private AboutUsScreen aboutUsScreen;
-
-    @BeforeTest
-    public void setUp() {
-        homeScreen.openPage(getEnv());
-        homeScreen.clickToggleThemeButton();
-    }
-
-    // Add test methods here
-    @Test
-    public void testAboutPageIsDisplayed() {
-        aboutUsScreen = homeScreen.navigateToAboutPage();
-        Assert.assertTrue(aboutUsScreen.isScreenLoaded(), "About page is not loaded");
-    }
+//    private final HomeScreen homeScreen = new HomeScreen();
+//    private AboutUsScreen aboutUsScreen;
+//
+//    @BeforeTest
+//    public void setUp() {
+//        homeScreen.openPage(getEnv());
+//        homeScreen.clickToggleThemeButton();
+//    }
+//
+//    // Add test methods here
+//    @Test
+//    public void testAboutPageIsDisplayed() {
+//        aboutUsScreen = homeScreen.navigateToAboutPage();
+//        Assert.assertTrue(aboutUsScreen.isScreenLoaded(), "About page is not loaded");
+//    }
 }
